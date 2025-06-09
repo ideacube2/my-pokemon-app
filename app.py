@@ -84,24 +84,24 @@ if menu == "포켓몬 정보 보기":
         with stat_col1:
             # HP
             st.write("💚 **HP**")
-            st.progress(pokemon['HP'] / 100)
-            st.write(f"`{pokemon['HP']}/100`")
+            st.progress(min(pokemon['HP'] / 150, 1.0))  # 최대값 150으로 설정
+            st.write(f"`{pokemon['HP']}`")
             
             # 공격
             st.write("⚔️ **공격**")
-            st.progress(pokemon['공격'] / 100)
-            st.write(f"`{pokemon['공격']}/100`")
+            st.progress(min(pokemon['공격'] / 150, 1.0))
+            st.write(f"`{pokemon['공격']}`")
         
         with stat_col2:
             # 방어
             st.write("🛡️ **방어**")
-            st.progress(pokemon['방어'] / 100)
-            st.write(f"`{pokemon['방어']}/100`")
+            st.progress(min(pokemon['방어'] / 150, 1.0))
+            st.write(f"`{pokemon['방어']}`")
             
             # 스피드
             st.write("💨 **스피드**")
-            st.progress(pokemon['스피드'] / 100)
-            st.write(f"`{pokemon['스피드']}/100`")
+            st.progress(min(pokemon['스피드'] / 150, 1.0))
+            st.write(f"`{pokemon['스피드']}`")
         
         # 총 능력치
         total = pokemon['HP'] + pokemon['공격'] + pokemon['방어'] + pokemon['스피드']
@@ -202,7 +202,7 @@ elif menu == "전체 도감":
                     st.write(f"총 능력치: {total}")
                     
                     # 간단한 능력치 바
-                    st.progress(total / 400)  # 최대값 대비 비율
+                    st.progress(min(total / 600, 1.0))  # 최대값 600으로 설정
 
 elif menu == "랜덤 뽑기":
     st.write("## 🎲 포켓몬 랜덤 뽑기")
