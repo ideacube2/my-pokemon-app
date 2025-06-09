@@ -6,24 +6,24 @@ st.write("어떤 포켓몬을 선택할까요?")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    # GitHub에 올린 이미지 사용
-    st.image("images/pikachu.png", width=150)
+    # 업로드된 이미지 파일 사용
+    st.image("images/pikachu.png", width=150, caption="피카츄 ⚡")
     if st.button("⚡ 피카츄"):
         st.write("피카츄를 선택했어요!")
         st.write("전기 공격! ⚡⚡⚡")
         st.balloons()
 
 with col2:
-    # GitHub에 올린 이미지 사용
-    st.image("images/charmander.png", width=150)
+    # 업로드된 이미지 파일 사용
+    st.image("images/charmander.png", width=150, caption="파이리 🔥")
     if st.button("🔥 파이리"):
         st.write("파이리를 선택했어요!")
         st.write("불꽃 공격! 🔥🔥🔥")
         st.balloons()
 
 with col3:
-    # GitHub에 올린 이미지 사용
-    st.image("images/squirtle.png", width=150)
+    # 업로드된 이미지 파일 사용
+    st.image("images/squirtle.png", width=150, caption="꼬부기 💧")
     if st.button("💧 꼬부기"):
         st.write("꼬부기를 선택했어요!")
         st.write("물 공격! 💧💧💧")
